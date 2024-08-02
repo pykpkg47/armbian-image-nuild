@@ -17,6 +17,7 @@ on:
         description: 'Kernel branch'
         options:
         - legacy
+        - vendor
         - current
         - edge
         default: 'current'
@@ -26,10 +27,8 @@ on:
         description: 'Userspace'
         options:
         - jammy
-        - mantic
+        - noble
         - bookworm
-        - trixie
-        - sid
         default: 'jammy'
 
       armbian_ui:
