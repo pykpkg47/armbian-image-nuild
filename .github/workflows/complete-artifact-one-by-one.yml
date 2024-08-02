@@ -285,6 +285,7 @@ on:
         - xiaomi-elish
         - xiaomi-umi
         - zeropi
+
 jobs:
 
   build:
@@ -300,7 +301,6 @@ jobs:
           armbian_kernel_branch:      "${{inputs.armbian_kernel_branch}}"
           armbian_ui:                 "${{inputs.armbian_ui}}"
           armbian_board:              "${{inputs.armbian_board}}"
-          armbian_release_tittle:     "Armbian SDK"
-          armbian_release_body:       "Virtual images for x86 and arm64"
-          armbian_pgp_key:            "${{secrets.GPG_KEY1}}"
-          armbian_pgp_password:       "${{secrets.GPG_PASSPHRASE1}}"
+          armbian_release_tittle:     "Armbian image release for ${{inputs.armbian_board}}"
+          armbian_release_body:       " kernel:${{inputs.armbian_kernel_branch}} \n distro: ${{inputs.armbian_release}} \n UI: ${{inputs.armbian_ui}} "
+ 
