@@ -47,7 +47,7 @@ on:
       armbian_version:
         description: 'Version'
         required: false
-        default: ''
+        default: 'v24.05'
 
       armbian_board:
         type: choice
@@ -293,7 +293,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: armbian/build@v24.2.1
+      - uses: armbian/build@main
         with:
           armbian_token:              "${{secrets.GITHUB_TOKEN}}"
           armbian_target:             "${{inputs.armbian_target}}"
@@ -301,6 +301,7 @@ jobs:
           armbian_kernel_branch:      "${{inputs.armbian_kernel_branch}}"
           armbian_ui:                 "${{inputs.armbian_ui}}"
           armbian_board:              "${{inputs.armbian_board}}"
+          armbian_branch:             "${{inputs.armbian_version}}"
           armbian_release_tittle:     "Armbian image release for ${{inputs.armbian_board}}"
           armbian_release_body:       " kernel:${{inputs.armbian_kernel_branch}} \n distro: ${{inputs.armbian_release}} \n UI: ${{inputs.armbian_ui}} "
  
