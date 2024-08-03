@@ -47,7 +47,7 @@ on:
       armbian_version:
         description: 'Version'
         required: false
-        default: 'v24.05'
+        default: ''
 
       armbian_board:
         type: choice
