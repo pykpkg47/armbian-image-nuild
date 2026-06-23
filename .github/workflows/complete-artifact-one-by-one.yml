@@ -31,7 +31,8 @@ on:
         - jammy
         - noble
         - bookworm
-        default: 'jammy'
+        - resolute
+        default: 'noble'
 
       armbian_ui:
         type: choice
