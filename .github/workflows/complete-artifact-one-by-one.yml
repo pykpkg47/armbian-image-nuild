@@ -323,7 +323,7 @@ jobs:
           armbian_version:            "${{inputs.armbian_version}}" 
           armbian_release_tag:        "${{inputs.armbian_release_tag}}" 
           armbian_artifacts:          "${{inputs.armbian_target == 'kernel' && 'build/output/debs/' || inputs.armbian_target =='uboot' && 'build/output/debs/' ||  'build/output/images/'}}"
-          armbian_release_tittle:     "Armbian image release for ${{inputs.armbian_board}}"
+          armbian_release_title:     "Armbian image release for ${{inputs.armbian_board}}"
           armbian_release_body:       " kernel:${{inputs.armbian_kernel_branch}} \n distro: ${{inputs.armbian_release}} \n UI: ${{inputs.armbian_ui}} "
       
       - name: Setup tmate session
